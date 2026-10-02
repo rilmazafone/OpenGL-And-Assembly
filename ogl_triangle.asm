@@ -1,20 +1,3 @@
-;==============================================================================
-; ogl_triangle.asm
-;  x86-64 NASM + OpenGL (fixed-function) demo.
-;
-;  Opens a Win32 window, creates an OpenGL context, and renders a rotating
-;  RGB triangle. Pure assembly: no C runtime is linked.
-;
-;  Build:
-;    nasm -f win64 ogl_triangle.asm -o ogl_triangle.obj
-;    gcc -m64 -nostartfiles -Wl,--subsystem,windows -Wl,-e,WinMain \
-;        ogl_triangle.obj -o ogl_triangle.exe \
-;        -lopengl32 -lgdi32 -luser32 -lkernel32
-;
-;  Calling convention (Windows x64): args in RCX,RDX,R8,R9, then stack;
-;  32 bytes of shadow space; stack 16-byte aligned at each call site.
-;==============================================================================
-
     bits 64
     default rel
 
